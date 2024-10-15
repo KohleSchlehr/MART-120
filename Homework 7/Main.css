@@ -1,0 +1,27 @@
+h1 {
+    font-size: x-large;
+}
+h2 {
+    font-size: large;
+}
+h3 {
+    font-size: large;
+}
+h4 {
+    font-size: large;
+}
+h5 {
+    font-size: large;
+}
+.MyClass1 {
+font-weight: bold;
+}
+#MYID1 {
+font-weight: bold;
+font-weight: 52px;
+}
+body{
+    background-color:black;
+    background-image:url(Legion.png);
+    background-blend-mode:luminosity;
+}
