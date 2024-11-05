@@ -4,6 +4,40 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
         <script>src="sketch.js"</script>
         <script>
+var redColor = 123;
+var greenColor = 39;
+var blueColor = 21;
+var headX = 250;
+var headY = 100;
+var headD = 125;
+var headDirection = 2;
+var llegX = 210;
+var llegY = 30;
+var llegD = 100;
+var llegT = 280;
+var llegDirection = 2;
+var lleg2Direction = 2;
+var rlegX = 260;
+var rlegY = 30;
+var rlegD = 100;
+var rlegT = 280;
+var rlegDirection = 2;
+var rleg2Direction = 2;
+var larm1X = 190;
+var larm1Y = 160;
+var larm2X = 130;
+var larm2Y = 250;
+var larmDirection = 2;
+var larm2Direction = 2;
+var rarm1X = 310;
+var rarm1Y = 160;
+var rarm2X = 370;
+var rarm2Y = 250;
+var rarmDirection = 2;
+var rarm2Direction = 2;
+var size = 22;
+var count = 0;
+var sizeDirection = 2;
             function setup()
 {
     createCanvas(500, 500,);
@@ -12,21 +46,66 @@
 
 function draw()
 {
+    background(redColor,greenColor,blueColor);
     background(120);
-    circle(250,100,125);
+    circle(headX,headY,headD);
+    headX+=headDirection;
+    if(headX >= 500 || headX <= 0)
+    {
+        headDirection *= -1;
+    }
+    headY+=headDirection;
+    if(headY >= 500 || headY <= 0)
+    {
+        headDirection *= -1;
+    }
     point(225, 75); strokeWeight(10);
     point(275, 75);
     line(215, 110, 285, 110);
     square(190,160,120)
-    line(190,160,130,250);
-    line(310,160,370,250);
-    rect(210,280,30,100)
-    rect(260,280,30,100)
+    line(larm1X,larm1Y,larm2X,larm2Y);
+    larm1X+=larmDirection;
+    larm2X+=larm2Direction;
+    if(larm2Direction >= 500 || larmDirection <= 0)
+    {
+        larmDirection *= -1;
+    }
+    line(rarm1X,rarm1Y,rarm2X,rarm2Y);
+    rarm1X+=rarmDirection;
+    rarm2X+=rarm2Direction;
+    if(rarmDirection >= 500 || rarm2Direction <= 0)
+    {
+        rarmDirection *= -1;
+    }
+    rect(llegX,llegT,llegY,llegD)
+    lleg1Y+=llegDirection;
+    if(llegDirection >= 500 || llegDirection <= 0)
+    {
+        llegDirection *= -1;
+    }
+    rect(rlegX,rlegT,rlegY,rlegD)
+    rleg1Y+=rlegDirection;
+    if(rlegDirection >= 500 || rlegDirection <= 0)
+    {
+        rlegDirection *= -1;
+    }
     triangle(260, 380, 275, 395, 290, 380);
     triangle(210, 380, 225, 395, 240, 380);
+    textSize(size);
+    size+= sizeDirection;
+    count++;
+    if(count > 5)
+    {
+        sizeDirection *=-1;
+        count = 0;
+    }
     text("It's Me!",30,40);
     text("Kohle Schlehr",400,460);
+   
+    
+
 }
+
         </script>
     </head>
     <body>
