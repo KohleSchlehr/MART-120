@@ -54,6 +54,7 @@ function draw()
     {
         headDirection *= -1;
     }
+    console.log(headX);
     headY+=headDirection;
     if(headY >= 500 || headY <= 0)
     {
@@ -78,13 +79,13 @@ function draw()
         rarmDirection *= -1;
     }
     rect(llegX,llegT,llegY,llegD)
-    lleg1Y+=llegDirection;
+    llegY+=llegDirection;
     if(llegDirection >= 500 || llegDirection <= 0)
     {
         llegDirection *= -1;
     }
     rect(rlegX,rlegT,rlegY,rlegD)
-    rleg1Y+=rlegDirection;
+    rlegY+=rlegDirection;
     if(rlegDirection >= 500 || rlegDirection <= 0)
     {
         rlegDirection *= -1;
