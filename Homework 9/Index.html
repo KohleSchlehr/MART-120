@@ -7,16 +7,22 @@
 var redColor = 123;
 var greenColor = 39;
 var blueColor = 21;
+
+// Head
 var headX = 250;
 var headY = 100;
 var headD = 125;
 var headDirection = 2;
 var llegX = 210;
+
+//Left Leg
 var llegY = 30;
 var llegD = 100;
 var llegT = 280;
 var llegDirection = 2;
 var lleg2Direction = 2;
+
+// Right Leg
 var rlegX = 260;
 var rlegY = 30;
 var rlegD = 100;
@@ -24,17 +30,22 @@ var rlegT = 280;
 var rlegDirection = 2;
 var rleg2Direction = 2;
 var larm1X = 190;
+
+// Left Arm
 var larm1Y = 160;
 var larm2X = 130;
 var larm2Y = 250;
 var larmDirection = 2;
 var larm2Direction = 2;
+
+// Right Arm
 var rarm1X = 310;
 var rarm1Y = 160;
 var rarm2X = 370;
 var rarm2Y = 250;
 var rarmDirection = 2;
 var rarm2Direction = 2;
+
 var size = 22;
 var count = 0;
 var sizeDirection = 2;
@@ -80,15 +91,15 @@ function draw()
     }
     rect(llegX,llegT,llegY,llegD)
     llegY+=llegDirection;
-    if(llegDirection >= 500 || llegDirection <= 0)
+    if(llegDirection <= 500 || llegDirection >= 0)
     {
         llegDirection *= -1;
     }
     rect(rlegX,rlegT,rlegY,rlegD)
-    rlegY+=rlegDirection;
-    if(rlegDirection >= 500 || rlegDirection <= 0)
-    {
-        rlegDirection *= -1;
+   if(rlegY <= 500);
+   {
+    rlegY++
+   }
     }
     triangle(260, 380, 275, 395, 290, 380);
     triangle(210, 380, 225, 395, 240, 380);
@@ -100,12 +111,12 @@ function draw()
         sizeDirection *=-1;
         count = 0;
     }
-    text("It's Me!",30,40);
-    text("Kohle Schlehr",400,460);
-   
+
     
 
-}
+    text("It's Me!",30,40);
+    text("Kohle Schlehr",400,460);
+
 
         </script>
     </head>

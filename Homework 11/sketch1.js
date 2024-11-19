@@ -100,7 +100,7 @@ function draw()
         shape1Y = height;
     }
 
-    // potential enemy
+    // potential enemy 
     fill(0,0,0);
     // draw the shape
     circle(shape2X, shape2Y, 10);
