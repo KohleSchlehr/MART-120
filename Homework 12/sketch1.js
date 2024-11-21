@@ -146,7 +146,7 @@ function createExitMessage()
 function createYouWinMessage()
 {
     // check to see if the character has left the exit
-    if(characterX > width && characterY > width-5)
+    if(characterX > width && characterY > height-50)
         {
             fill(0);
             stroke(5);
