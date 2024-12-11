@@ -20,22 +20,22 @@ function setup()
     shapeYSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
     createCharacter(200,350);
 
-    var x = getRandomNumber;
-        var y = getRandomNumber;
+    var x = getRandomNumber(5);
+        var y = getRandomNumber(5);
         var diameter = 25;
         for(var i = 0; i < 5; i++)
         {
             myXs[i] = x;
             myYs[i] = y;
             myDiameters[i] = diameter;
-            x += getRandomNumber;
-            y += getRandomNumber;
-            diameter += getRandomNumber;
+            x += getRandomNumber(200);
+            y += getRandomNumber(200);
+            diameter += getRandomNumber(5);
         }
 
-        myXs[i] = getRandomNumber(1500);
-        myYs[i] = getRandomNumber(700);
-        myDiameters[i] = getRandomNumber(100);
+        //myXs[i] = getRandomNumber(1500);
+        //myYs[i] = getRandomNumber(700);
+        //myDiameters[i] = getRandomNumber(100);
 }
 
 function draw()
@@ -65,6 +65,9 @@ function draw()
 
     // create mouse object on click
     createMouseObject();
+
+    //move enemy 1
+    enemy1();
 }
 
 function characterMovement()
@@ -163,24 +166,30 @@ function getRandomNumber(number)
      shape1XSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
      shape1YSpeed = Math.floor(Math.random() * (Math.floor(Math.random() * 5)) + 1);
 
+     for(var i = 0; i < 5; i++)
+     {
+
+
+
     // move the shape
-    myXs += shape1XSpeed;
-    myYs += shape1YSpeed;
+    myXs[i] += shape1XSpeed;
+    myYs[i] += shape1YSpeed;
     // check to see if the shape has gone out of bounds
-    if(myXs > width)
+    if(myXs[i] > width)
     {
-        myXs = 0;
+        myXs[i] = 0;
     }
-    if(myXs < 0)
+    if(myXs[i] < 0)
     {
-        myXs = width;
+        myXs[i] = width;
     }
-    if(myYs > height)
+    if(myYs[i] > height)
     {
-        myYs = 0;
+        myYs[i] = 0;
     }
-    if(myYs < 0)
+    if(myYs[i] < 0)
     {
-        myYs = height;
+        myYs[i] = height;
     }
+}
 }
