@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+    color: gold
+}
+
+h2{
+    text-align: center;
+    
+}
+
+body{
+    background-color: rgb(132,132,132);
+    background-image:url(GameCover.png);
+    background-blend-mode:luminosity;
+}
+
